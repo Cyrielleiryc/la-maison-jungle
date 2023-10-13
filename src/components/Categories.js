@@ -1,11 +1,11 @@
 import '../styles/Categories.css'
 
-function Categories({ setChosenCategory, categories, chosenCategory }) {
+function Categories({ setActiveCategory, categories, activeCategory }) {
 	return (
 		<div className='lmj-categories'>
 			<select
-				value={chosenCategory}
-				onChange={(e) => setChosenCategory(e.target.value)}
+				value={activeCategory}
+				onChange={(e) => setActiveCategory(e.target.value)}
 				className='lmj-categories-select'
 			>
 				<option value=''>---</option>
@@ -15,7 +15,7 @@ function Categories({ setChosenCategory, categories, chosenCategory }) {
 					</option>
 				))}
 			</select>
-			<button onClick={() => setChosenCategory('')}>Réinitialiser</button>
+			<button onClick={() => setActiveCategory('')}>Réinitialiser</button>
 		</div>
 	)
 }
